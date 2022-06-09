@@ -6,41 +6,52 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/cardinalery_title" >
+    android:title=" " >
+
+    <!-- Cardinalery Header -->
+    <PreferenceCategory
+        android:title="@string/cardinalery_title"
+        android:layout="@layout/cardinalery_preference_category">
+    </PreferenceCategory>
 
         <!-- Status Bar -->
-        <PreferenceScreen
+        <Preference
             android:key="statusbar_category"
             android:title="@string/statusbar_title"
             android:fragment="org.cardinalery.fragments.StatusBarSettings" 
+            settings:layout="@layout/cardinalery_dashboard_preference_top"
             android:icon="@drawable/ic_settings_statusbar"/>
 
         <!-- Quick Settings panel -->
-        <PreferenceScreen
+        <Preference
             android:key="quicksettings_category"
             android:title="@string/quicksettings_title"
             android:fragment="org.cardinalery.fragments.QuickSettings"
+            settings:layout="@layout/cardinalery_dashboard_preference_middle"
             android:icon="@drawable/ic_settings_quicksettings"/>
 
         <!-- Buttons -->
-        <PreferenceScreen
+        <Preference
             android:key="buttonsettings_category"
             android:title="@string/button_title"
             android:fragment="org.cardinalery.fragments.ButtonSettings"
+            settings:layout="@layout/cardinalery_dashboard_preference_bottom"
             android:icon="@drawable/ic_settings_buttons"/>
 
         <!-- Power Menu -->
-        <PreferenceScreen
+        <Preference
             android:key="powermenu_category"
             android:title="@string/powermenu_title" 
             android:fragment="org.cardinalery.fragments.PowerMenuSettings"
+            settings:layout="@layout/cardinalery_dashboard_preference_top"
             android:icon="@drawable/ic_settings_powermenu"/>
 
         <!-- Misc -->
-        <PreferenceScreen
+        <Preference
             android:key="misc_category"
             android:title="@string/misc_title" 
             android:fragment="org.cardinalery.fragments.MiscSettings"
+            settings:layout="@layout/cardinalery_dashboard_preference_bottom"
             android:icon="@drawable/ic_settings_miscs"/>
 
 </PreferenceScreen>
