@@ -9,6 +9,7 @@
     <string name="cardinalery_title">Cardinalery</string>
 
     <!-- Categories -->
+    <string name="team_title">About Team</string>
     <string name="button_title">Buttons</string>
     <string name="misc_title">Miscellaneous</string>
     <string name="navbar_title">Navigation bar</string>
@@ -21,5 +22,13 @@
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
+
+    <!-- CardinalOS Team -->
+    <string name="cardinal_team">Team CardinalOS</string>
+    <string name="devs_header">Core Team</string>
+    <string name="kizziama">Egii</string>
+    <string name="kizziama_description">Founder/Developer</string>
+    <string name="luigiee">Angga</string>
+    <string name="luigiee_description">Co-Founder/Developer</string>
 
 </resources>

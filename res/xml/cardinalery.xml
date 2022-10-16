@@ -14,6 +14,14 @@
         android:layout="@layout/cardinalery_preference_category">
     </PreferenceCategory>
 
+        <!-- Cardinal Team -->
+	<Preference
+            android:key="team__category"
+            android:title="@string/team_title"
+            android:fragment="org.cardinalery.CardinalTeam"
+            android:icon="@drawable/ic_settings_team"
+            settings:layout="@layout/cardinalery_dashboard_preference_single"/>
+
         <!-- Status Bar -->
         <Preference
             android:key="statusbar_category"

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 CardinalOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title=" " >
+
+    <!-- Lottie Animation-->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="team_animation"
+        android:layout="@layout/cardinal_team"
+        android:selectable="false" />
+
+    <!-- Team Header -->
+    <PreferenceCategory
+        android:title="@string/cardinal_team"
+        android:layout="@layout/cardinalery_preference_category">
+    </PreferenceCategory>
+
+	<PreferenceCategory
+            android:key="fortune_dev"
+            android:title="@string/devs_header" >
+	</PreferenceCategory>
+
+        <Preference
+            android:key="kizziama"
+            android:title="@string/kizziama"
+            android:icon="@drawable/ic_code"
+            settings:layout="@layout/cardinalery_dashboard_preference_top"
+            android:summary="@string/kizziama_description" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/Kizziama" />
+        </Preference>
+
+        <Preference
+            android:key="luigiee"
+            android:title="@string/luigiee"
+            android:icon="@drawable/ic_code"
+            settings:layout="@layout/cardinalery_dashboard_preference_bottom"
+            android:summary="@string/luigiee_description" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/@Luigiee" />
+        </Preference>
+
+</PreferenceScreen>

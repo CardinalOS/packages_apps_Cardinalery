@@ -21,6 +21,10 @@
     </style>
 
     <!-- Dashboard -->
+    <style name="cardinaleryDashboardPreferenceSingle" parent="cardinaleryPreferenceSingle">
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
     <style name="cardinaleryDashboardPreferenceTop" parent="cardinaleryPreferenceTop">
         <item name="android:layout_marginTop">@dimen/cardinalery_pref_horizontal_padding</item>
     </style>
@@ -43,6 +47,11 @@
     </style>
 
     <!-- General -->
+    <style name="cardinaleryPreferenceSingle" parent="cardinaleryPreferenceBase">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@drawable/cardinalery_preference_background_single</item>
+    </style>
+
     <style name="cardinaleryPreferenceBase">
         <item name="android:layout_marginStart">@dimen/cardinalery_pref_horizontal_padding</item>
         <item name="android:layout_marginEnd">@dimen/cardinalery_pref_horizontal_padding</item>
