@@ -7,23 +7,29 @@ package org.cardinalery;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-import android.os.Bundle;
-
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
-public class Cardinalery extends SettingsPreferenceFragment {
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
+public class Cardinalery extends DashboardFragment {
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    protected int getPreferenceScreenResId() {
+        return R.xml.cardinalery;
+    }
 
-        addPreferencesFromResource(R.xml.cardinalery);
+    @Override
+    protected String getLogTag() {
+        return "Cardinalery";
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CARDINALERY;
+        return MetricsProto.MetricsEvent.CARDINAL;
     }
 
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.cardinalery);
 }
